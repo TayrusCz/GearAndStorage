@@ -1,1 +1,49 @@
-
+name: Bug report
+description: Report a problem with GearAndStorage. English and Czech are welcome.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Please search existing issues first. Attach logs after removing passwords, tokens and private server details."
+  - type: input
+    id: versions
+    attributes:
+      label: GearAndStorage and Valheim versions
+      description: Include both client and server versions when playing multiplayer.
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where does it happen?
+      options:
+        - Single-player
+        - Dedicated server
+        - Player-hosted world
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Describe what to do, including the relevant item, station or quest ID.
+      placeholder: "1. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Other mods and relevant settings
+      description: Include your mod list and the relevant config section.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs and screenshots
+      description: Attach BepInEx/LogOutput.log and screenshots here. For multiplayer, include relevant client and server logs if available.
